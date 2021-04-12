@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+int main()
+{
+int ID [3][2]=
+    //ID Number PIN Code
+ {  {2001101562,121101}, //user 1
+    {123456789,12345}, //user 2
+    {987654321,54321} }; //user 3
+int user, password;
+
+               //Input the data
+
+ printf("Enter ID number: ");
+scanf("%d", &user);
+ printf("Enter password: ");
+scanf("%d",&password);
+
+               // validating
+
+if(user == ID [0][0] && password == ID [0][1]){
+    printf("\nYou have successfully logged in\n");
+    printf("ID# : %d\n", ID[0][0]);
+    }
+else if (user == ID[1][0] && password == ID[1][1]){
+    printf("\nYou have successfully logged in\n");
+    printf("ID# : %d\n", ID[1][0]);
+    }
+else if (user == ID[2][0] && password == ID[2][1]){
+    printf("\nYou have successfully logged in\n");
+    printf("ID# : %d\n", ID[2][0]);
+    }
+else { printf("\nInvalid ID/PIN!\n"); }
+
+return 0;
+}
